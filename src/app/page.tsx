@@ -203,7 +203,7 @@ const mysteryPrizes = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-y-20 px-4 sm:px-12 bg-gray-950">
+    <main className="flex min-h-screen flex-col items-center gap-y-20 px-4 sm:px-12 bg-blue-300">
       <Header></Header>
       <div className="flex flex-col gap-4 items-center justify-center text-center mt-28">
         <h1
@@ -213,15 +213,15 @@ export default function Home() {
           ACPC Fall Contest
         </h1>
         <div className="flex items-center gap-4">
-          <div className="text-xs sm:text-sm border-white border-[1px] rounded-3xl py-1 px-2 flex-grow flex items-center gap-0 sm:gap-2">
+          <div className="text-xs sm:text-sm border-blue-950 border-[1px] rounded-3xl py-1 px-2 flex-grow flex items-center gap-0 sm:gap-2">
             <RxClock></RxClock>
             <p>April 14th - 1:00 PM</p>
           </div>
-          <div className="text-xs sm:text-sm border-white border-[1px] rounded-3xl py-1 px-2 flex-grow flex items-center gap-0 sm:gap-2">
+          <div className="text-xs sm:text-sm border-blue-950 border-[1px] rounded-3xl py-1 px-2 flex-grow flex items-center gap-0 sm:gap-2">
             <RxSewingPinFilled></RxSewingPinFilled>
             <p>PETR 118</p>
           </div>
-          <div className="text-xs sm:text-sm border-white border-[1px] rounded-3xl py-1 px-2 flex-grow flex items-center gap-0 sm:gap-2">
+          <div className="text-xs sm:text-sm border-blue-950 border-[1px] rounded-3xl py-1 px-2 flex-grow flex items-center gap-0 sm:gap-2">
             <RxFace></RxFace>
             <p>Food + Prizes</p>
           </div>
@@ -239,7 +239,7 @@ export default function Home() {
           figure out what&rsquo;s going on!
         </p>
       </div>
-      <div className="w-full border-gray-700 border-[1px] rounded-lg p-8 hover:bg-black duration-500">
+      <div className="w-full border-gray-700 border-[1px] rounded-lg p-8 bg-blue-200 hover:bg-blue-100 duration-500">
         <h2
           id="what"
           className="text-4xl font-bold uppercase mb-4"
@@ -257,10 +257,8 @@ export default function Home() {
           >
             Aggie Competitive Programming Club
           </a>
-          &rsquo;s Fall <s className="text-slate-300">underground crime ring</s>{" "}
-          competitive programming contest! Here,{" "}
-          <s className="text-slate-300">criminals</s> participants work in
-          groups of 3 to solve well-defined problems by writing programs in 5
+          &rsquo;s Fall competitive programming contest! Here, participants work
+          in groups of 3 to solve well-defined problems by writing programs in 5
           hours to test their algorithmic knowledge, programming skills, logical
           reasoning, and ability to perform under pressure.
         </p>
@@ -269,7 +267,7 @@ export default function Home() {
           friends!
         </p>
         <a
-          className="glow py-2 px-4 rounded-lg hover:bg-[rgba(44,53,76,0.5)]"
+          className="glow py-2 px-4 rounded-lg hover:bg-[rgba(88,164,245,0.5)]"
           href="/signup"
         >
           Sign Up Now
@@ -288,12 +286,12 @@ export default function Home() {
           level of experience.
         </p>
         <div className="mt-4 flex flex-col sm:flex-row gap-4">
-          <div className="flex flex-col items-center justify-center gap-2 border-[1px] p-8 rounded-lg hover:px-10 hover:bg-slate-800 duration-500">
+          <div className="flex flex-col items-center justify-center gap-2 border-[1px] p-8 rounded-lg hover:px-10 hover:bg-blue-400 duration-500">
             <p className="text-8xl font-bold">5</p>
             <p className="text-xl">Hours</p>
           </div>
           <div className="flex-grow flex flex-wrap gap-4 duration-200">
-            <div className="flex-grow flex items-center justify-center border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-slate-600 duration-500">
+            <div className="flex-grow flex items-center justify-center border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-500 duration-500">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
@@ -311,7 +309,7 @@ export default function Home() {
                 </Tooltip>
               </TooltipProvider>
             </div>
-            <div className="flex-grow flex items-center justify-center border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-slate-500 duration-500">
+            <div className="flex-grow flex items-center justify-center border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-400 duration-500">
               <div>
                 <div className="text-2xl font-bold flex items-center gap-2">
                   <RxSewingPinFilled></RxSewingPinFilled>
@@ -320,14 +318,14 @@ export default function Home() {
                 <p className="text-lg">Room 118</p>
               </div>
             </div>
-            <div className="flex-grow flex items-center justify-center text-lg font-bold border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-slate-800 duration-500">
+            <div className="flex-grow flex items-center justify-center text-lg font-bold border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-400 duration-500">
               All Majors and Classifications welcome
             </div>
             <div className="flex flex-col sm:flex-row flex-grow gap-4">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
-                    <div className="flex-grow flex items-center justify-center h-full border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-slate-600 duration-500">
+                    <div className="flex-grow flex items-center justify-center h-full border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-500 duration-500">
                       <div className="flex flex-col gap-2">
                         <p className="text-4xl font-bold">$2000+ in Prizes</p>
                         <p className="text-md">also free food and glory.</p>
@@ -339,7 +337,7 @@ export default function Home() {
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
-              <div className="flex-grow border-[1px] p-4 rounded-lg hover:bg-slate-700 duration-500">
+              <div className="flex-grow border-[1px] p-4 rounded-lg hover:bg-[#aad6ff] duration-500">
                 <p className="text-lg font-bold mb-8">
                   C++, Java, Python, and more allowed
                 </p>
@@ -355,7 +353,7 @@ export default function Home() {
             </div>
 
             <div className="flex gap-4">
-              <div className="border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-slate-800 duration-500">
+              <div className="border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-400 duration-500">
                 <p className="text-2xl font-bold">Teams of 3</p>
                 <p className="text-md mt-2">
                   You can all write code at the same time.
@@ -364,7 +362,7 @@ export default function Home() {
                   Collaboration only allowed among your teammates.
                 </p>
               </div>
-              <div className=" border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-slate-600 duration-500">
+              <div className=" border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-500 duration-500">
                 <p className="text-4xl font-bold">Internet Allowed??</p>
                 <p className="text-md  mt-2">
                   It is allowed to search the Internet and use code which can be
@@ -372,7 +370,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-center text-md border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-slate-600 duration-500">
+            <div className="flex items-center justify-center text-md border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-500 duration-500">
               <div className="flex gap-4">
                 <p className="text-xl font-bold">
                   Only basic knowledge of programming is required
@@ -399,7 +397,7 @@ export default function Home() {
           <p>See more details:</p>
           <a
             href="/specifics"
-            className="p-2 border-2 border-slate-500 bg-slate-900 hover:bg-slate-800 rounded-lg"
+            className="p-2 border-2 border-blue-500 bg-blue-400 hover:bg-blue-500 rounded-lg"
           >
             Contest Specifics
           </a>
@@ -418,7 +416,7 @@ export default function Home() {
           {schedule.map((event, index) => (
             <div
               key={"event" + index}
-              className="flex items-center justify-between border-gray-700 border-b-[1px] p-4 hover:bg-slate-800 rounded-lg duration-500"
+              className="flex items-center justify-between border-gray-700 border-b-[1px] p-4 hover:bg-blue-400 rounded-lg duration-500"
             >
               <p className="text-xl font-bold">{event.time}</p>
               <p className="text-lg">{event.event}</p>
@@ -440,7 +438,7 @@ export default function Home() {
             Main Prizes (Top 3)
           </h3>
           <div className="flex flex-col lg:flex-row gap-4 mt-2">
-            <div className="bg-slate-900 border-2 rounded-lg px-4 pb-4 pt-2 flex-grow">
+            <div className="bg-blue-400 border-2 rounded-lg px-4 pb-4 pt-2 flex-grow">
               <h4 className="mb-2">Prize Pool</h4>
               <div className="flex gap-4 flex-wrap justify-between">
                 {mainPrizes.map((prize, index) => (
@@ -455,14 +453,14 @@ export default function Home() {
             </div>
             <div>
               <h4 className="text-lg font-bold mb-2">Prizes</h4>
-              <div className="flex flex-col rounded-lg border-2 p-4">
+              <div className="flex flex-col rounded-lg border-2 p-4 bg-sky-300">
                 {["1st", "2nd", "3rd"].map((place, index) => (
                   <div
                     key={"place" + index}
-                    className="border-b-2 pb-1 mb-2 group hover:border-slate-500 duration-200"
+                    className="border-b-2 pb-1 mb-2 group hover:border-sky-500 duration-200"
                   >
                     <h5 className="text-lg font-bold">{place} Place</h5>
-                    <div className="text-md text-slate-400 group-hover:text-slate-300 duration-200">
+                    <div className="text-md text-slate-800 group-hover:text-slate-900 duration-200">
                       <p>{place} choice from the Main Prize pool.</p>
                     </div>
                   </div>
@@ -477,7 +475,7 @@ export default function Home() {
             Classification Prizes
           </h3>
           <div className="flex flex-col lg:flex-row gap-4 mt-2">
-            <div className="bg-slate-900 border-2 rounded-lg px-4 pb-4 pt-2 flex-grow">
+            <div className="bg-blue-400 border-2 rounded-lg px-4 pb-4 pt-2 flex-grow">
               <h4 className="mb-2">Prize Pool</h4>
               <div className="flex gap-4 flex-wrap justify-between">
                 {classificationPrizes.map((prize, index) => (
@@ -492,18 +490,18 @@ export default function Home() {
             </div>
             <div className="lg:w-[30vw]">
               <h4 className="text-lg font-bold mb-2 ">Prizes</h4>
-              <div className="flex flex-col rounded-lg border-2 p-4">
+              <div className="flex flex-col rounded-lg border-2 p-4 bg-indigo-400">
                 {["Freshman", "Sophomore", "Junior", "Senior", "Graduate"].map(
                   (place, index) => (
                     <div
                       key={"place" + index}
-                      className="border-b-2 pb-1 mb-2 group hover:border-slate-500 duration-200"
+                      className="border-b-2 pb-1 mb-2 group hover:border-indigo-600 duration-200"
                     >
                       <h5 className="text-lg font-bold">{place} Category</h5>
                     </div>
                   )
                 )}
-                <div className="mt-2 text-sm text-slate-400 group-hover:text-slate-300 duration-200">
+                <div className="mt-2 text-sm text-slate-900 group-hover:text-slate-300 duration-200">
                   <h4 className="font-bold">Notes:</h4>
                   <ul className="ml-4 list-disc">
                     <li>
@@ -529,8 +527,8 @@ export default function Home() {
           <h3 className="text-2xl font-bold uppercase" style={rowdies.style}>
             Special / &quot;Creative&quot; Prizes (Top 3)
           </h3>
-          <div className="flex flex-col lg:flex-row gap-4 mt-2">
-            <div className="bg-slate-900 border-2 rounded-lg px-4 pb-4 pt-2 flex-grow">
+          <div className="flex flex-col lg:flex-row gap-4 mt-2 ">
+            <div className="bg-blue-400 border-2 rounded-lg px-4 pb-4 pt-2 flex-grow0">
               <h4 className="mb-2">Prize Pool</h4>
               <div className="flex gap-4 flex-wrap justify-between">
                 {mysteryPrizes.map((prize, index) => (
@@ -545,7 +543,7 @@ export default function Home() {
             </div>
             <div>
               <h4 className="text-lg font-bold mb-2">Prizes</h4>
-              <div className="flex flex-col rounded-lg border-2 p-4">
+              <div className="flex flex-col rounded-lg border-2 p-4 bg-blue-600">
                 {["First to Solve Problem A", "???", "???", "???", "???"].map(
                   (place, index) => (
                     <div

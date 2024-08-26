@@ -4,9 +4,8 @@ Website to display information for ACPC's 2024 Fall Contest in a fun way :D
 
 ### Important Links:
 
-- [Info Doc](https://docs.google.com/document/d/1Rv7hs1aL4GoU0whKZb28Azd7umQxxQw9nt17RJ6Dgnw/edit?usp=sharing)
-- [Prize Info](https://docs.google.com/spreadsheets/d/1FZ2ICYkpx9cBP_G2O0zxewZh1IC2fMsQuVLalFtQI3o/edit?usp=sharing)
-- [Crime Theming](https://docs.google.com/presentation/d/1LDE5qShK13J64HDNhaBir8C8ojXvcpACha3_Oz12hR4/edit?usp=sharing)
+- [Info Doc](https://docs.google.com/document/d/1gnqQH4x3cuPg1xf4xkDCm2pW4H_OIjH6EG6UV1gaPok/edit?usp=sharing)
+- Prize Info - **TBD**
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
