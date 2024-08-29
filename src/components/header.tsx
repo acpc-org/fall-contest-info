@@ -6,6 +6,9 @@ import Link from "next/link";
 
 import Countdown from "./countdown";
 
+// fonts
+import { rowdies } from "../app/fonts";
+
 // icons
 import { RxHamburgerMenu } from "react-icons/rx";
 
@@ -61,14 +64,14 @@ function DropDownMenu() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    className=" bg-cover flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/signup"
+                    style={{ backgroundImage: "url('/layers/complete.png')" }}
                   >
-                    <Icons.logo className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    <div className="mb-2 mt-4 text-lg font-medium text-white">
                       Sign Up Now
                     </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
+                    <p className="text-sm leading-tight text-slate-300">
                       Deadline is April 13th at 11:59 PM
                     </p>
                   </a>
@@ -114,8 +117,8 @@ function DropDownMenu() {
 
 export default function Header() {
   return (
-    <header className="w-full flex items-center justify-between fixed z-10 bg-blue-400 backdrop-blur-lg p-4 border-b-[1px] border-slate-500">
-      <div className="sm:hidden group hover:cursor-pointer hover:bg-sky-500 p-3 rounded-lg ">
+    <header className="dark w-full flex items-center justify-between fixed z-20 bg-[#1519209d] text-white backdrop-blur-lg p-4 border-b-[1px] border-slate-800 h-[100px]">
+      <div className="sm:hidden group hover:cursor-pointer hover:bg-sky-400 p-3 rounded-lg ">
         <RxHamburgerMenu></RxHamburgerMenu>
         <div className="hidden sm:block group-hover:block group-hover:absolute group-hover:top-4 group-hover:left-2 bg-sky-600 rounded-lg">
           <DropDownMenu></DropDownMenu>
@@ -131,8 +134,9 @@ export default function Header() {
       <div className="flex items-center gap-4">
         <Countdown></Countdown>
         <a
-          className="glow py-2 px-4 rounded-lg hover:bg-[rgba(44,53,76,0.5)]"
+          className="pulse-animation bold py-2 px-4 rounded-lg text-yellow-50 bg-orange-600 hover:text-white hover:bg-orange-500 hover:rotate-1 hover:scale-105 duration-200"
           href="/signup"
+          style={rowdies.style}
         >
           Sign Up
         </a>

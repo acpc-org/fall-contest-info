@@ -2,7 +2,6 @@ import Image from "next/image";
 
 // components
 import Header from "@/components/header";
-import Magnifier from "@/components/magnifier";
 import Allowed from "@/components/allowed";
 import PrizeItem from "@/components/prizeItem";
 import Footer from "@/components/footer";
@@ -18,6 +17,7 @@ import { rowdies } from "./fonts";
 
 // icons
 import { RxSewingPinFilled, RxClock, RxFace } from "react-icons/rx";
+import Forest from "@/components/forest";
 
 // lists
 const schedule = [
@@ -26,39 +26,28 @@ const schedule = [
     event: "Check-In / Pre Contest",
   },
   {
-    time: "1:00 PM - 6:00 PM",
+    time: "1:00 PM - 4:00 PM",
     event: "Contest",
   },
   {
-    time: "6:00 PM - 6:15 PM",
+    time: "4:00 PM - 4:15 PM",
     event: "Pizza / Break",
   },
   {
-    time: "6:15 PM - 7:00 PM",
-    event: "Prizes & Solutions",
+    time: "4:15 PM - 4:30 PM",
+    event: "Prizes",
+  },
+  {
+    time: "4:30 PM - 5:00 PM",
+    event: "Problem Solutions",
   },
 ];
 
 const sponsors = [
   {
-    name: "Bellflight",
-    logo: "/bellflight.png",
-    link: "https://www.bellflight.com/",
-  },
-  {
     name: "Roblox",
     logo: "/roblox.png",
     link: "https://www.roblox.com/",
-  },
-  {
-    name: "Optiver",
-    logo: "/optiver.png",
-    link: "https://www.optiver.com/",
-  },
-  {
-    name: "Chevron",
-    logo: "/chevron.png",
-    link: "https://www.chevron.com/",
   },
   {
     name: "Texas A&M Good Bull Fund",
@@ -121,55 +110,47 @@ const allowedLanguages = [
 
 const mainPrizes = [
   {
-    item: "Switch Lite",
-    description:
-      "The Nintendo Switch Lite is a compact alternative to the standard Nintendo Switch, making it a perfect travel companion for any gamer on the go.",
-    pic: "/switch_lite.png",
+    item: "???",
+    description: "?????",
+    pic: "/unknown.png",
   },
   {
-    item: "Razer Gaming Keyboard",
-    description:
-      "Razer Huntsman Mini 60% Gaming Keyboard; Fast Keyboard Switches, Clicky Optical Switches, Chroma RGB Lighting, PBT Keycaps, Onboard Memory, in Classic Black.",
-    pic: "/razer_gaming_keyboard.png",
+    item: "???",
+    description: "?????",
+    pic: "/unknown.png",
   },
   {
-    item: "HyperX Gaming Mouse",
-    description:
-      "The HyperX Pulsefire Haste; Ultra Lightweight, 62g, 100 Hour Battery Life, 2.4Ghz Wireless, Honeycomb Shell, Hex Design, Up to 16000 DPI, 6 Programmable Buttons, in White.",
-    pic: "/hyperx_gaming_mouse.png",
+    item: "???",
+    description: "?????",
+    pic: "/unknown.png",
   },
 ];
 
 const classificationPrizes = [
   {
-    item: "Mechanical Keyboard",
-    description:
-      "AJAZZ KA820 75% Wired RGB Hot Swap Mechanical Keyboard; with Volume Knob, Poron Foam Gasket Mounted, South Facing LED, OME Profile PBT Keycap, and Custom Linear Switch.",
-    pic: "/mechanical_keyboard.png",
+    item: "???",
+    description: "?????",
+    pic: "/unknown.png",
   },
   {
-    item: "Laptop Stand",
-    description:
-      "A laptop stand is a device that holds a laptop in a raised position, allowing the user to view the screen at eye level. This can help reduce neck strain and improve posture.",
-    pic: "/laptop_stand.png",
+    item: "???",
+    description: "?????",
+    pic: "/unknown.png",
   },
   {
-    item: "Echo Dot",
-    description:
-      "Amazon Echo Dot (5th Gen); has Clock, Compact smart speaker with Alexa, and enhanced LED display for at-a-glance clock, timers, weather and more, all in Glacier White ",
-    pic: "/echo_dot.png",
+    item: "???",
+    description: "?????",
+    pic: "/unknown.png",
   },
   {
-    item: "Bluetooth Speaker",
-    description:
-      "Anker Soundcore 2 Portable Bluetooth Speaker with 12W Stereo Sound, Bluetooth 5, Bassup, IPX7 Waterproof, 24-Hour Playtime, and Wireless Stereo Pairing. A speaker for your home, the outdoors, and travel.",
-    pic: "/bluetooth_speaker.png",
+    item: "???",
+    description: "?????",
+    pic: "/unknown.png",
   },
   {
-    item: "Portable Chargers",
-    description:
-      "Anker Magnetic Portable Charger, 5,000mAh Wireless Portable Charger with USB-C Cable, Battery Pack Only Compatible with iPhone 15/15 Plus/15 Pro/15 Pro Max, iPhone 14/13/12 Series and more.",
-    pic: "/portable_charger.png",
+    item: "???",
+    description: "?????",
+    pic: "/unknown.png",
   },
 ];
 
@@ -203,77 +184,122 @@ const mysteryPrizes = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-y-20 px-4 sm:px-12 bg-blue-300">
+    <main className="flex min-h-screen flex-col items-center gap-y-20 bg-[#132b2e]">
       <Header></Header>
-      <div className="flex flex-col gap-4 items-center justify-center text-center mt-28">
-        <h1
-          className="text-5xl sm:text-6xl font-bold text-white uppercase"
-          style={rowdies.style}
-        >
-          ACPC Fall Contest
-        </h1>
-        <div className="flex items-center gap-4">
-          <div className="text-xs sm:text-sm border-blue-950 border-[1px] rounded-3xl py-1 px-2 flex-grow flex items-center gap-0 sm:gap-2">
-            <RxClock></RxClock>
-            <p>April 14th - 1:00 PM</p>
-          </div>
-          <div className="text-xs sm:text-sm border-blue-950 border-[1px] rounded-3xl py-1 px-2 flex-grow flex items-center gap-0 sm:gap-2">
-            <RxSewingPinFilled></RxSewingPinFilled>
-            <p>PETR 118</p>
-          </div>
-          <div className="text-xs sm:text-sm border-blue-950 border-[1px] rounded-3xl py-1 px-2 flex-grow flex items-center gap-0 sm:gap-2">
-            <RxFace></RxFace>
-            <p>Food + Prizes</p>
-          </div>
-        </div>
-        <div className="z-[0]">
-          <Magnifier
-            src="/dead_pineapple.png"
-            magnifierHeight={100}
-            magnifierWidth={100}
-            zoomLevel={2}
-          />
-        </div>
-        <p className="italic">
-          Trouble&rsquo;s brewing at Fall Contest 2024… Sign up and help us
-          figure out what&rsquo;s going on!
-        </p>
-      </div>
-      <div className="w-full border-gray-700 border-[1px] rounded-lg p-8 bg-blue-200 hover:bg-blue-100 duration-500">
-        <h2
-          id="what"
-          className="text-4xl font-bold uppercase mb-4"
-          style={rowdies.style}
-        >
-          What is going on???
-        </h2>
-        <p className="mb-4">
-          Welcome to the{" "}
-          <a
-            href="https://tamuacpc.com/about"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline decoration-dashed hover:decoration-solid "
+      <div className="flex flex-col items-center justify-center text-center pt-28 bg-[#000]">
+        <div className="absolute w-[100vw] top-0 h-[50vh] z-[5] translate-y-[100px] bg-gradient-to-b from-[#000000cb] from-50% via-[#020d0d89] via-80% to-[#020d0d00] to-100%"></div>
+        <div className="flex flex-col gap-4 items-center justify-center pb-8 px-4 sm:px-12 ">
+          <h1
+            className="text-5xl sm:text-6xl font-bold text-white uppercase z-[6]"
+            style={rowdies.style}
           >
-            Aggie Competitive Programming Club
-          </a>
-          &rsquo;s Fall competitive programming contest! Here, participants work
-          in groups of 3 to solve well-defined problems by writing programs in 5
-          hours to test their algorithmic knowledge, programming skills, logical
-          reasoning, and ability to perform under pressure.
-        </p>
-        <p className="mb-8">
-          Compete for the chance to win prizes, enjoy free food, have fun with
-          friends!
-        </p>
-        <a
-          className="glow py-2 px-4 rounded-lg hover:bg-[rgba(88,164,245,0.5)]"
-          href="/signup"
-        >
-          Sign Up Now
-        </a>
+            ACPC Fall Contest
+          </h1>
+          <div className="flex items-center gap-4 text-black">
+            <div
+              className="bg-image text-sm sm:text-md py-1 px-4 z-[6] flex-grow flex items-center gap-0 sm:gap-2 shadow-md hover:scale-[1.05] hover:rotate-1 hover:shadow-lg duration-200"
+              style={{ backgroundImage: "url('/wood/wood1.png')" }}
+            >
+              <RxClock></RxClock>
+              <p>September 22nd - 12:00 PM</p>
+            </div>
+            <div
+              className="bg-image text-sm sm:text-md py-1 px-4 z-[6] flex-grow flex items-center gap-0 sm:gap-2 shadow-md hover:scale-[1.05] hover:rotate-1 hover:shadow-lg duration-200"
+              style={{ backgroundImage: "url('/wood/wood2.png')" }}
+            >
+              <RxSewingPinFilled></RxSewingPinFilled>
+              <p>PETR 118</p>
+            </div>
+            <div
+              className="bg-image text-sm sm:text-md py-1 px-4 z-[6] flex-grow flex items-center gap-0 sm:gap-2 shadow-md hover:scale-[1.05] hover:rotate-1 hover:shadow-lg duration-200"
+              style={{ backgroundImage: "url('/wood/wood1.png')" }}
+            >
+              <RxFace></RxFace>
+              <p>Food + Prizes</p>
+            </div>
+          </div>
+        </div>
+        <div className="w-100vw">
+          <Forest />
+        </div>
+        <div className=" w-[100vw] h-[10vh] bg-gradient-to-b from-[#02090c] from-25% to-[#132b2e] to-100%"></div>
       </div>
-      <div className="w-full p-8">
+      <div className="flex justify-bottom px-4 sm:px-12">
+        <div
+          className="bg-image w-full rounded-lg pl-24 pr-10 py-24 duration-500 text-black"
+          style={{ backgroundImage: "url('/paper.png')" }}
+        >
+          <h2
+            id="what"
+            className="text-4xl font-bold uppercase mb-4"
+            style={rowdies.style}
+          >
+            What is going on???
+          </h2>
+          <p className="mb-4">
+            Welcome to{" "}
+            <a
+              href="https://tamuacpc.com/about"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-dashed hover:decoration-solid "
+            >
+              Aggie Competitive Programming Club
+            </a>
+            &rsquo;s Fall competitive programming contest! Here, You’ll see
+            between nine-twelve competitive programming problems in this contest
+            with difficulties ranging from{" "}
+            <span className="bold text-orange-500" style={rowdies.style}>
+              completely trivial
+            </span>{" "}
+            to{" "}
+            <span className="bold text-orange-500" style={rowdies.style}>
+              omega difficult
+            </span>
+            . Whether you are just starting off with coding or are a “seasoned
+            codeforces chef”, we hope that you’ll find a variety of problems
+            that provide the perfect level of challenge for you!
+          </p>
+          <p className="mb-8">
+            Solving competitive programming problems is all about problem
+            solving + logical thinking and finding ways to implement your ideas
+            in code. Each problem has a well-defined algorithmic solution that
+            you must identify and implement in order to solve.
+          </p>
+          <p className="mb-8">
+            If you’re a complete beginner, don’t worry! We have y’all in mind,
+            and most of the problems in our set do not require advanced
+            programming techniques or algorithms. Instead, they read more like
+            puzzles!
+          </p>
+          <p className="mb-8">
+            So come, and compete for the chance to win prizes, qualify for{" "}
+            <a
+              className="bold text-orange-500 hover:text-orange-700 duration-200"
+              style={rowdies.style}
+              href="https://icpc.global/"
+            >
+              the International Collegiate Programming Contest (ICPC)
+            </a>
+            , enjoy free food, have fun with friends!
+          </p>
+          <Image
+            src={"/stuff/campfire.png"}
+            alt={""}
+            width={175}
+            height={175}
+            className="absolute bottom-0 right-0 translate-y-5 z-1 hover:scale-105 hover:-rotate-1 duration-150"
+          ></Image>
+          <a
+            className="pulse-animation py-2 px-4 rounded-lg text-yellow-50 bg-orange-400 hover:text-white hover:bg-orange-500 hover:scale-105 hover:rotate-1 duration-200"
+            style={rowdies.style}
+            href="/signup"
+          >
+            Sign Up Now
+          </a>
+        </div>
+      </div>
+      <div className="w-full px-12 sm:px-20">
         <h2
           id="overview"
           className="text-4xl font-bold uppercase"
@@ -285,22 +311,34 @@ export default function Home() {
           Open to all majors and classifications, (almost) any language, and any
           level of experience.
         </p>
-        <div className="mt-4 flex flex-col sm:flex-row gap-4">
-          <div className="flex flex-col items-center justify-center gap-2 border-[1px] p-8 rounded-lg hover:px-10 hover:bg-blue-400 duration-500">
-            <p className="text-8xl font-bold">5</p>
-            <p className="text-xl">Hours</p>
+        <div className="mt-4 flex flex-col sm:flex-row gap-4 text-black">
+          <div className="group flex flex-col hover:px-10 border-[6px] rounded-md p-8 border-[#423225] bg-[#d0a87a] shadow-sm hover:shadow-md duration-500">
+            <Image
+              src={"/stuff/bear.png"}
+              alt={""}
+              width={175}
+              height={175}
+              className="absolute z-1 left-0 translate-x-8 -translate-y-4 group-hover:scale-105 -rotate-12 group-hover:-rotate-6 duration-150"
+            ></Image>
+            <div className="flex flex-col h-full items-center justify-center gap-2">
+              <p className="text-8xl font-bold">5</p>
+              <p className="text-xl">Hours</p>
+            </div>
           </div>
           <div className="flex-grow flex flex-wrap gap-4 duration-200">
-            <div className="flex-grow flex items-center justify-center border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-500 duration-500">
+            <div
+              className="flex-grow flex items-center justify-center p-4 bg-image hover:scale-105 hover:rotate-1 duration-200"
+              style={{ backgroundImage: "url('/wood/wood2.png')" }}
+            >
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
                     <div>
                       <div className="text-2xl font-bold flex items-center gap-2">
                         <RxClock></RxClock>
-                        <p>April 14th</p>
+                        <p>September 22nd</p>
                       </div>
-                      <p className="text-lg">1:00 PM - 6:00 PM</p>
+                      <p className="text-lg">12:00 PM - 5:00 PM</p>
                     </div>
                   </TooltipTrigger>
                   <TooltipContent>
@@ -309,7 +347,7 @@ export default function Home() {
                 </Tooltip>
               </TooltipProvider>
             </div>
-            <div className="flex-grow flex items-center justify-center border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-400 duration-500">
+            <div className="flex-grow flex items-center justify-center border-[6px] rounded-md p-4 border-[#423225] bg-[#d0a87a] shadow-sm hover:shadow-md hover:scale-105 hover:rotate-1 duration-200">
               <div>
                 <div className="text-2xl font-bold flex items-center gap-2">
                   <RxSewingPinFilled></RxSewingPinFilled>
@@ -318,63 +356,120 @@ export default function Home() {
                 <p className="text-lg">Room 118</p>
               </div>
             </div>
-            <div className="flex-grow flex items-center justify-center text-lg font-bold border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-400 duration-500">
+            <div
+              className="flex-grow flex items-center justify-center text-lg px-4 font-bold bg-image hover:scale-105 hover:rotate-1 duration-200"
+              style={{ backgroundImage: "url('/wood/wood4.png')" }}
+            >
               All Majors and Classifications welcome
             </div>
             <div className="flex flex-col sm:flex-row flex-grow gap-4">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
-                    <div className="flex-grow flex items-center justify-center h-full border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-500 duration-500">
-                      <div className="flex flex-col gap-2">
+                    <div className="group flex-grow flex items-end justify-start h-full border-[6px] rounded-md p-4 border-[#523522] bg-[#ab785e] shadow-sm hover:shadow-md hover:rotate-1 duration-200">
+                      <div className="flex flex-col gap-2 justify-center items-center h-full">
                         <p className="text-4xl font-bold">$2000+ in Prizes</p>
                         <p className="text-md">also free food and glory.</p>
                       </div>
+                      <Image
+                        src={"/stuff/lighter.png"}
+                        alt={""}
+                        width={100}
+                        height={100}
+                        className="absolute right-0 sm:right-auto sm:-translate-x-6 translate-y-12 z-1 hover:right-0 hover:-rotate-1 hover:sm:right-auto group-hover:scale-105 duration-150"
+                      ></Image>
                     </div>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <a href="/#schedule">See Prizes</a>
+                    <a href="/#prizes">See Prizes</a>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
-              <div className="flex-grow border-[1px] p-4 rounded-lg hover:bg-[#aad6ff] duration-500">
-                <p className="text-lg font-bold mb-8">
-                  C++, Java, Python, and more allowed
-                </p>
-                <Allowed
-                  items={allowedLanguages}
-                  notAllowed="None of these???"
-                  allowedMessage="Yes it is! You can use it at the contest."
-                  notAllowedMessage="Bruh just pick a different one."
-                  buttonName="See if your language is allowed!"
-                  panelPosition="Choose a Language"
-                ></Allowed>
+              <div className="group flex flex-grow border-[6px] rounded-md p-4 border-[#c0845a] bg-[#ecc4a4] hover:shadow-md">
+                <div>
+                  <p className="text-lg font-bold mb-8">
+                    C++, Java, Python, and more allowed
+                  </p>
+                  <Allowed
+                    items={allowedLanguages}
+                    notAllowed="None of these???"
+                    allowedMessage="Yes it is! You can use it at the contest."
+                    notAllowedMessage="Bruh just pick a different one."
+                    buttonName="See if your language is allowed!"
+                    panelPosition="Choose a Language"
+                  ></Allowed>
+                </div>
+                <div>
+                  <Image
+                    src={"/stuff/tent.png"}
+                    alt={""}
+                    width={175}
+                    height={175}
+                    className="hidden xl:block absolute z-1 right-0 lg:-translate-x-52 translate-y-[75px] group-hover:-rotate-3 group-hover:scale-105 duration-150"
+                  ></Image>
+                  <Image
+                    src={"/stuff/tree1.png"}
+                    alt={""}
+                    width={150}
+                    height={150}
+                    className="hidden xl:block absolute z-1 right-0 -translate-x-28 -translate-y-16 rotate-2 group-hover:-rotate-6 group-hover:scale-105 duration-150"
+                  ></Image>
+                  <Image
+                    src={"/stuff/tree2.png"}
+                    alt={""}
+                    width={180}
+                    height={180}
+                    className="hidden xl:block absolute z-1 right-0 -translate-x-6 -translate-y-6 rotate-1 group-hover:rotate-12 group-hover:scale-105 duration-150"
+                  ></Image>
+                  <Image
+                    src={"/stuff/can.png"}
+                    alt={""}
+                    width={55}
+                    height={55}
+                    className="hidden xl:block absolute z-1 right-0 -translate-x-44 translate-y-[150px] -rotate-1 group-hover:rotate-6 group-hover:scale-105 duration-150"
+                  ></Image>
+                  <Image
+                    src={"/stuff/plant.png"}
+                    alt={""}
+                    width={50}
+                    height={50}
+                    className="hidden xl:block absolute z-1 right-0 -translate-x-12 lg:-translate-x-72 translate-y-[120px] group-hover:rotate-3 group-hover:scale-105 duration-150"
+                  ></Image>
+                </div>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <div className="border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-400 duration-500">
-                <p className="text-2xl font-bold">Teams of 3</p>
-                <p className="text-md mt-2">
-                  You can all write code at the same time.
-                </p>
-                <p className="text-md  mt-2">
-                  Collaboration only allowed among your teammates.
-                </p>
+              <div
+                className="bg-image p-4 shadow-sm hover:shadow-md hover:scale-105 hover:rotate-1 duration-200"
+                style={{ backgroundImage: "url('/wood/wood1.png')" }}
+              >
+                <p>You must work individually!</p>
               </div>
-              <div className=" border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-500 duration-500">
+              <div className="border-[6px] rounded-md p-4 border-[#423225] bg-[#d0a87a] shadow-sm hover:shadow-md hover:-rotate-1 duration-200">
                 <p className="text-4xl font-bold">Internet Allowed??</p>
                 <p className="text-md  mt-2">
                   It is allowed to search the Internet and use code which can be
-                  proved to have been published before the contest began.
+                  proved to have been published before the contest began. You
+                  cannot use AI tools such as copilot or ChatGPT to write
+                  real-time code during the contest.
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-center text-md border-[1px] p-4 rounded-lg hover:scale-[1.025] hover:bg-blue-500 duration-500">
+            <div className="flex items-center justify-center text-md border-[6px] rounded-md p-4 border-[#4a2a18] bg-[#7f4e36] shadow-sm hover:shadow-md hover:rotate-1 duration-200 group">
               <div className="flex gap-4">
-                <p className="text-xl font-bold">
-                  Only basic knowledge of programming is required
-                </p>
+                <div className="flex flex-col">
+                  <p className="text-xl font-bold">
+                    Only basic knowledge of programming is required
+                  </p>
+                  <Image
+                    src={"/stuff/fish.png"}
+                    alt={""}
+                    width={155}
+                    height={155}
+                    className="absolute z-1 translate-x-2 translate-y-[250px] md:translate-y-[150px] lg:translate-y-[100px] xl:translate-y-[55px] -rotate-45 group-hover:-rotate-3 duration-150"
+                  ></Image>
+                </div>
                 <div className="flex flex-col gap-2">
                   <p className="text-md">
                     Write programs to solve well-defined algorithmic problems.
@@ -395,15 +490,25 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-4 mt-8">
           <p>See more details:</p>
-          <a
-            href="/specifics"
-            className="p-2 border-2 border-blue-500 bg-blue-400 hover:bg-blue-500 rounded-lg"
-          >
-            Contest Specifics
-          </a>
+          <div className="flex gap-4 align-center">
+            <a
+              href="/specifics"
+              className="p-2 px-4 shadow-md hover:shadow-lg hover:rotate-1 hover:scale-105 hover:duration-200 bg-image"
+              style={{ backgroundImage: "url('/wood/wood4.png')" }}
+            >
+              Contest Specifics
+            </a>
+            <a
+              href="/rules"
+              className="p-2 px-8 shadow-md hover:shadow-lg hover:rotate-1 hover:scale-105 hover:duration-200 bg-image"
+              style={{ backgroundImage: "url('/wood/wood5.png')" }}
+            >
+              Rules
+            </a>
+          </div>
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full px-4 sm:px-12">
         <h2
           id="schedule"
           className="text-4xl font-bold uppercase"
@@ -416,29 +521,33 @@ export default function Home() {
           {schedule.map((event, index) => (
             <div
               key={"event" + index}
-              className="flex items-center justify-between border-gray-700 border-b-[1px] p-4 hover:bg-blue-400 rounded-lg duration-500"
+              className="flex items-center justify-between border-gray-700 border-b-[1px] p-4 bg-[#173234] hover:bg-[#254b4e] rounded-lg duration-500"
             >
               <p className="text-xl font-bold">{event.time}</p>
               <p className="text-lg">{event.event}</p>
             </div>
           ))}
         </div>
+        <p className="mt-4 italic">
+          Please arrive on-time between 12:00 pm and 12:30 pm so you have time
+          to properly get setup and hear important contest announcements!
+        </p>
       </div>
-      <div id="prizes" className="w-full p-8">
+      <div id="prizes" className="w-full px-12 sm:px-20">
         <h2 className="text-4xl font-bold uppercase" style={rowdies.style}>
           Prizes
         </h2>
         <p className="my-4">
-          Enough prizes for every member of the team, totalling over $2000 in
-          value! However, due to legal / organizational requirements, only Texas
-          A&M teams can receive prizes.
+          Enough prizes for every member of the participant, totalling over
+          $2000 in value! However, due to legal / organizational requirements,
+          only Texas A&M participants can receive prizes.
         </p>
         <div className="mb-8">
           <h3 className="text-2xl font-bold uppercase" style={rowdies.style}>
             Main Prizes (Top 3)
           </h3>
           <div className="flex flex-col lg:flex-row gap-4 mt-2">
-            <div className="bg-blue-400 border-2 rounded-lg px-4 pb-4 pt-2 flex-grow">
+            <div className="bg-orange-200 border-[10px] border-[#7e523a] shadow-lg rounded-lg px-4 pb-4 pt-2 flex-grow">
               <h4 className="mb-2">Prize Pool</h4>
               <div className="flex gap-4 flex-wrap justify-between">
                 {mainPrizes.map((prize, index) => (
@@ -453,14 +562,17 @@ export default function Home() {
             </div>
             <div>
               <h4 className="text-lg font-bold mb-2">Prizes</h4>
-              <div className="flex flex-col rounded-lg border-2 p-4 bg-sky-300">
+              <div
+                className="flex flex-col p-6 py-10 bg-image text-black"
+                style={{ backgroundImage: "url('/wood/wood3.png')" }}
+              >
                 {["1st", "2nd", "3rd"].map((place, index) => (
                   <div
                     key={"place" + index}
-                    className="border-b-2 pb-1 mb-2 group hover:border-sky-500 duration-200"
+                    className="border-b-2 pb-1 mb-2 group border-orange-800 hover:border-orange-950 duration-200"
                   >
                     <h5 className="text-lg font-bold">{place} Place</h5>
-                    <div className="text-md text-slate-800 group-hover:text-slate-900 duration-200">
+                    <div className="text-md text-orange-900 group-hover:text-slate-900 duration-200">
                       <p>{place} choice from the Main Prize pool.</p>
                     </div>
                   </div>
@@ -475,7 +587,7 @@ export default function Home() {
             Classification Prizes
           </h3>
           <div className="flex flex-col lg:flex-row gap-4 mt-2">
-            <div className="bg-blue-400 border-2 rounded-lg px-4 pb-4 pt-2 flex-grow">
+            <div className="bg-orange-200 border-[10px] border-[#7e523a] shadow-lg rounded-lg px-4 pb-4 pt-2 flex-grow">
               <h4 className="mb-2">Prize Pool</h4>
               <div className="flex gap-4 flex-wrap justify-between">
                 {classificationPrizes.map((prize, index) => (
@@ -490,18 +602,21 @@ export default function Home() {
             </div>
             <div className="lg:w-[30vw]">
               <h4 className="text-lg font-bold mb-2 ">Prizes</h4>
-              <div className="flex flex-col rounded-lg border-2 p-4 bg-indigo-400">
+              <div
+                className="flex flex-col p-6 pb-10 bg-image text-black"
+                style={{ backgroundImage: "url('/wood/wood1.png')" }}
+              >
                 {["Freshman", "Sophomore", "Junior", "Senior", "Graduate"].map(
                   (place, index) => (
                     <div
                       key={"place" + index}
-                      className="border-b-2 pb-1 mb-2 group hover:border-indigo-600 duration-200"
+                      className="border-b-2 pb-1 mb-2 group border-orange-800 hover:border-orange-950 duration-200"
                     >
                       <h5 className="text-lg font-bold">{place} Category</h5>
                     </div>
                   )
                 )}
-                <div className="mt-2 text-sm text-slate-900 group-hover:text-slate-300 duration-200">
+                <div className="mt-2 text-md text-slate-900 group-hover:text-slate-300 duration-200">
                   <h4 className="font-bold">Notes:</h4>
                   <ul className="ml-4 list-disc">
                     <li>
@@ -509,12 +624,12 @@ export default function Home() {
                       from the Clasfification Prize Pool.
                     </li>
                     <li>
-                      Teams that win a main prize cannot also win a class year
-                      prize.
+                      Participants that win a main prize cannot also win a class
+                      year prize.
                     </li>
                     <li>
-                      Class year is determined by the member of your team with
-                      the highest class year.
+                      Class year is determined by the member of your participant
+                      with the highest class year.
                     </li>
                   </ul>
                 </div>
@@ -528,7 +643,7 @@ export default function Home() {
             Special / &quot;Creative&quot; Prizes (Top 3)
           </h3>
           <div className="flex flex-col lg:flex-row gap-4 mt-2 ">
-            <div className="bg-blue-400 border-2 rounded-lg px-4 pb-4 pt-2 flex-grow0">
+            <div className="bg-orange-200 border-[10px] border-[#7e523a] shadow-lg rounded-lg px-4 pb-4 pt-2 flex-grow0">
               <h4 className="mb-2">Prize Pool</h4>
               <div className="flex gap-4 flex-wrap justify-between">
                 {mysteryPrizes.map((prize, index) => (
@@ -543,15 +658,18 @@ export default function Home() {
             </div>
             <div>
               <h4 className="text-lg font-bold mb-2">Prizes</h4>
-              <div className="flex flex-col rounded-lg border-2 p-4 bg-blue-600">
+              <div
+                className="flex flex-col p-6 py-10 bg-image text-black"
+                style={{ backgroundImage: "url('/wood/wood2.png')" }}
+              >
                 {["First to Solve Problem A", "???", "???", "???", "???"].map(
                   (place, index) => (
                     <div
                       key={"place" + index}
-                      className="border-b-2 pb-1 mb-2 group hover:border-slate-500 duration-200"
+                      className="border-b-2 pb-1 mb-2 group border-orange-800 hover:border-orange-700 duration-200"
                     >
                       <h5 className="text-lg font-bold">{place}</h5>
-                      <div className="text-md text-slate-400 group-hover:text-slate-300 duration-200">
+                      <div className="text-md text-orange-950 group-hover:text-orange-900 duration-200">
                         <p>
                           Choice from the Special/&quot;Creative&quot; Prize
                           pool.
@@ -565,37 +683,39 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full p-8">
+      <div className="w-full px-12 sm:px-20">
         <h2
           id="sponsors"
-          className="text-4xl font-bold uppercase"
+          className="text-4xl font-bold uppercase text-center"
           style={rowdies.style}
         >
           Sponsors
         </h2>
-        <div className="flex items-center gap-8 justify-between">
-          {sponsors.map((sponsor, index) => (
-            <TooltipProvider key={"sponsor" + index}>
-              <Tooltip>
-                <TooltipTrigger>
-                  <a
-                    href={sponsor.link}
-                    className="flex items-center gap-4 hover:scale-[1.1] duration-200"
-                  >
-                    <Image
-                      src={"/sponsors" + sponsor.logo}
-                      alt={sponsor.name}
-                      width={100}
-                      height={100}
-                    ></Image>
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{sponsor.name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          ))}
+        <div className="flex justify-center">
+          <div className="flex items-center gap-8 justify-between">
+            {sponsors.map((sponsor, index) => (
+              <TooltipProvider key={"sponsor" + index}>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <a
+                      href={sponsor.link}
+                      className="flex items-center gap-4 hover:scale-[1.1] duration-200"
+                    >
+                      <Image
+                        src={"/sponsors" + sponsor.logo}
+                        alt={sponsor.name}
+                        width={200}
+                        height={200}
+                      ></Image>
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{sponsor.name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            ))}
+          </div>
         </div>
       </div>
       {/* <div id="faq" className="w-full p-8">

@@ -41,9 +41,9 @@ function IsAllowed(params: isAllowedProps) {
     <div className="flex flex-col gap-1">
       <div className="flex items-center gap-2">
         You chose:
-        <div className="bg-blue-400 rounded-xl py-1 px-2">{params.chosen}</div>
+        <div className="bg-[#d18e6e] rounded-xl py-1 px-2">{params.chosen}</div>
       </div>
-      <div className="flex gap-2 items-center border-[1px] mt-1 p-2 rounded-lg">
+      <div className="bg-[#b99060] flex gap-2 items-center mt-1 p-2 rounded-lg">
         <LuPartyPopper></LuPartyPopper>
         <p>{params.message}</p>
       </div>
@@ -56,9 +56,9 @@ function IsNotAllowed(params: isAllowedProps) {
     <div className="flex flex-col gap-1">
       <div className="flex items-center gap-2">
         You chose:
-        <div className="bg-blue-400 rounded-xl py-1 px-2">{params.chosen}</div>
+        <div className="bg-[#ba7b5d] rounded-xl py-1 px-2">{params.chosen}</div>
       </div>
-      <div className="flex gap-2 items-center border-[1px] mt-1 p-2 rounded-lg">
+      <div className="bg-[#a5764c] flex gap-2 items-center mt-1 p-2 rounded-lg">
         <IoSadOutline></IoSadOutline>
         <p>{params.message}</p>
       </div>
@@ -74,7 +74,9 @@ export default function Allowed(params: AllowedProps) {
       <div className="">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline">{params.buttonName}</Button>
+            <Button className="bg-[#895d3b] hover:bg-[#6f492b]">
+              {params.buttonName}
+            </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56 max-h-[50vh] overflow-y-scroll">
             <DropdownMenuLabel>{params.panelPosition}</DropdownMenuLabel>

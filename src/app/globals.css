@@ -2,37 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-.glow {
-  box-shadow: 0 0 2px #ebeff7, 0 0 8px #ebeff7, 0 0 12px #ebeff7,
-    0 0 8px #4e586b;
-  -webkit-animation: blink 0.7s infinite alternate;
-  animation: blink 0.7s infinite ease-in-out alternate;
-  /* transition: all 0.5s ease-in-out; */
+.bg-image {
+  background: none center center fixed;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 1vh;
+  -o-background-size: 100% 1vh;
+  background-size: 100% 100%;
+  transform: scale(1);
 }
 
-.glow:hover {
-  box-shadow: 0 0 4px #fff, 0 0 16px #fff, 0 0 20px #fff, 0 0 16px #fff;
-  -webkit-animation: blink 0.7s;
-  animation: blink 0.7s ease-in-out;
+.pulse-animation {
+  -webkit-animation: pulse 0.7s infinite alternate;
+  animation: pulse 0.7s infinite ease-in-out alternate;
 }
 
-@-webkit-keyframes blink {
+.pulse-animation:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
   0% {
-    box-shadow: 0 0 2px #ebeff7, 0 0 8px #ebeff7, 0 0 12px #ebeff7,
-      0 0 8px #4e586b;
+    transform: scale(1);
   }
   100% {
-    box-shadow: 0 0 8px #fff, 0 0 12px #fff, 0 0 16px #fff, 0 0 8px #fff;
+    transform: scale(1.025);
   }
 }
 
-@keyframes blink {
+@keyframes pulse {
   0% {
-    box-shadow: 0 0 1px #ebeff7, 0 0 6px #ebeff7, 0 0 8px #ebeff7,
-      0 0 4px #4e586b;
+    transform: scale(1);
   }
   100% {
-    box-shadow: 0 0 2px #fff, 0 0 8px #fff, 0 0 10px #fff, 0 0 4px #fff;
+    transform: scale(1.025);
   }
 }
 
@@ -112,6 +116,6 @@
 }
 
 ::selection {
-  background: rgb(19, 74, 170);
+  background: rgb(11, 129, 158);
   color: white;
 }
