@@ -118,9 +118,9 @@ function DropDownMenu() {
 export default function Header() {
   return (
     <header className="dark w-full flex items-center justify-between fixed z-20 bg-[#1519209d] text-white backdrop-blur-lg p-4 border-b-[1px] border-slate-800 h-[100px]">
-      <div className="sm:hidden group hover:cursor-pointer hover:bg-sky-400 p-3 rounded-lg ">
+      <div className="sm:hidden group hover:cursor-pointer p-3 rounded-lg ">
         <RxHamburgerMenu></RxHamburgerMenu>
-        <div className="hidden sm:block group-hover:block group-hover:absolute group-hover:top-4 group-hover:left-2 bg-sky-600 rounded-lg">
+        <div className="hidden w-full h-[10vh] sm:flex group-hover:flex items-center group-hover:absolute group-hover:top-0 group-hover:left-0 bg-slate-900 pl-4 rounded-lg z-[100] duration-200">
           <DropDownMenu></DropDownMenu>
         </div>
       </div>
@@ -134,14 +134,14 @@ export default function Header() {
       <div className="flex items-center gap-4">
         <Countdown></Countdown>
         <a
-          className="pulse-animation bold py-1 px-2 rounded-lg text-yellow-50 bg-orange-600 hover:text-white hover:bg-orange-500 hover:rotate-1 hover:scale-105 duration-200"
+          className="text-xs md:text-sm lg:text-md pulse-animation bold py-1 px-2 rounded-lg text-yellow-50 bg-orange-600 hover:text-white hover:bg-orange-500 hover:rotate-1 hover:scale-105 duration-200"
           href="/signup"
           style={rowdies.style}
         >
-          Contest Sign Up
+          Sign Up
         </a>
         <a
-          className="pulse-animation bold py-1 px-2 rounded-lg text-yellow-50 bg-orange-600 hover:text-white hover:bg-orange-500 hover:rotate-1 hover:scale-105 duration-200"
+          className="text-xs md:text-sm pulse-animation bold py-1 px-2 rounded-lg text-yellow-50 bg-orange-600 hover:text-white hover:bg-orange-500 hover:rotate-1 hover:scale-105 duration-200"
           href="https://www.gem.com/lp/roblox/fa24tamu-innovationsatroblox"
           style={rowdies.style}
         >

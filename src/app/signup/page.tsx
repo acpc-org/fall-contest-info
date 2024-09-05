@@ -26,12 +26,36 @@ export default function SignUp() {
                 href="https://codeforces.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline decoration-dashed hover:decoration-solid"
+                className="underline decoration-dashed font-bold hover:decoration-solid text-orange-500"
+                style={rowdies.style}
               >
                 codeforces.com
               </a>{" "}
               account and use it when you register for the contest. If you have
               one already, just use that one.
+            </p>
+          </li>
+          <li className="mb-8">
+            <h2 className="text-lg font-bold uppercase">
+              Join our Codeforces group
+            </h2>
+            <p>
+              Also, join our Codeforces group using{" "}
+              <a
+                href="https://codeforces.com/group/EW9LgKVDr6/join"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-dashed font-bold hover:decoration-solid text-orange-500"
+                style={rowdies.style}
+              >
+                this link
+              </a>
+              {". "}
+              Join as a{" "}
+              <b className="font-bold text-orange-500" style={rowdies.style}>
+                Participant
+              </b>
+              , not as a Spectator.
             </p>
           </li>
           <li className="mb-8">

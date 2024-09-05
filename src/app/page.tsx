@@ -4,7 +4,6 @@ import Image from "next/image";
 import Header from "@/components/header";
 import Allowed from "@/components/allowed";
 import PrizeItem from "@/components/prizeItem";
-import Footer from "@/components/footer";
 import {
   Tooltip,
   TooltipContent,
@@ -198,9 +197,9 @@ const mysteryPrizes = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-y-20 bg-[#132b2e]">
+    <main className="flex min-h-screen flex-col items-center gap-y-20 bg-[#132b2e] overflow-hidden">
       <Header></Header>
-      <div className="flex flex-col items-center justify-center text-center pt-28 bg-[#000]">
+      <div className="w-full overflow-hidden flex flex-col items-center justify-center text-center pt-28 bg-[#000]">
         <div className="absolute w-[100vw] top-0 h-[60vh] z-[5] translate-y-[100px] bg-gradient-to-b from-[#000000cb] from-50% via-[#020d0d89] via-80% to-[#020d0d00] to-100%"></div>
         <div className="flex flex-col gap-4 items-center justify-center pb-8 px-4 sm:px-12 ">
           <h1
@@ -246,7 +245,7 @@ export default function Home() {
       </div>
       <div className="flex justify-bottom px-4 sm:px-12">
         <div
-          className="bg-image w-full rounded-lg pl-24 pr-10 py-24 duration-500 text-black"
+          className="bg-image w-full rounded-lg pl-10 sm:pl-24 pr-10 py-24 duration-500 text-black"
           style={{ backgroundImage: "url('/paper.png')" }}
         >
           <h2
@@ -344,8 +343,8 @@ export default function Home() {
               className="absolute z-1 left-0 translate-x-8 -translate-y-4 group-hover:scale-105 -rotate-12 group-hover:-rotate-6 duration-150"
             ></Image>
             <div className="flex flex-col h-full items-center justify-center gap-2">
-              <p className="text-8xl font-bold">5</p>
-              <p className="text-xl">Hours</p>
+              <p className="text-8xl font-bold">3</p>
+              <p className="text-xl">Hours of competition</p>
             </div>
           </div>
           <div className="flex-grow flex flex-wrap gap-4 duration-200">
@@ -471,10 +470,12 @@ export default function Home() {
 
             <div className="flex gap-4">
               <div
-                className="bg-image p-4 shadow-sm hover:shadow-md hover:scale-105 hover:rotate-1 duration-200"
+                className="flex items-center justify-center bg-image p-4 shadow-sm hover:shadow-md hover:scale-105 hover:rotate-1 duration-200"
                 style={{ backgroundImage: "url('/wood/wood1.png')" }}
               >
-                <p>You must work individually!</p>
+                <p className="text-2xl bold sm:text-md">
+                  You must work individually!
+                </p>
               </div>
               <div className="border-[6px] rounded-md p-4 border-[#423225] bg-[#d0a87a] shadow-sm hover:shadow-md hover:-rotate-1 duration-200">
                 <p className="text-4xl font-bold">Internet Allowed??</p>
@@ -518,7 +519,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex items-center gap-4 mt-8">
+        <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
           <p>See more details:</p>
           <div className="flex gap-4 align-center">
             <a
@@ -776,7 +777,6 @@ export default function Home() {
           {}
         </div>
       </div> */}
-      <Footer></Footer>
     </main>
   );
 }

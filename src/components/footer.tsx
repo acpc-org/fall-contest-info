@@ -37,11 +37,13 @@ export default function Footer() {
       ></div>
       <div className="flex justify-between w-[100vw] bg-[#171b25] p-8">
         <div className="flex flex-col gap-8">
-          <div className="flex items-center gap-2">
-            <p className="text-white">Made with</p>
-            <FaHeart className="text-orange-600"></FaHeart>
-            <p className="text-white">by the 2024 ACPC Officers</p>
-          </div>
+          <p className="">
+            <span className="text-white">Made with</span>
+            <span>
+              <FaHeart className="text-orange-600"></FaHeart>
+            </span>
+            <span className="text-white">by the 2024 ACPC Officers</span>
+          </p>
           <Image src="/acpc-logo.svg" alt="" width={100} height={100}></Image>
         </div>
         <div className="flex  flex-col items-end">

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Forest() {
   return (
-    <>
+    <div className="flex flex-col items-center">
       <ParallaxBanner
         layers={[
           { image: "/layers/layer5.png", speed: -5 },
@@ -30,7 +30,7 @@ export default function Forest() {
         ]}
         className="h-[500px] w-[100vw] aspect-[16/9] bg-[#0f2828] "
       />
-      <div className="w-full h-full flex flex-col items-center justify-end p-8 bg-[#090b12]">
+      <div className="w-[100vw] h-full flex flex-col items-center justify-center p-8 bg-[#090b12]">
         <p className="italic text-white text-center">
           Your ACPC-sponsored field trip has taken quite the turn as the camping
           van crashes prior to reaching its destination. Stranded in the woods,
@@ -39,6 +39,6 @@ export default function Forest() {
           to make it through the night?
         </p>
       </div>
-    </>
+    </div>
   );
 }

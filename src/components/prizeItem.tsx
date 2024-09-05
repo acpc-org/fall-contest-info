@@ -22,7 +22,7 @@ export default function PrizeItem(params: PrizeItemProps) {
   );
 
   return (
-    <div className="bg-white text-black shadow-lg hover:shadow-xl hover:rotate-1 border-[1px] rounded-lg w-[200px] max-w-[30vw] flex-grow flex flex-col hover:scale-105 duration-300">
+    <div className="bg-white text-black shadow-lg hover:shadow-xl hover:rotate-1 border-[1px] rounded-lg w-[200px] sm:max-w-[30vw] flex-grow flex flex-col hover:scale-105 duration-300">
       <div className="p-4">
         <Image
           src={"/pin.png"}

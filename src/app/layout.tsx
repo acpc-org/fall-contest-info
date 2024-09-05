@@ -3,6 +3,7 @@ import "./globals.css";
 import { patrick } from "./fonts";
 
 import { Providers } from './providers';
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "ACPC Fall Contest",
@@ -17,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="text-lg ">
       <body className="bg-[#132b2e] text-white" style={patrick.style}>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <Footer/>
+        </Providers>
       </body>
     </html>
   );
