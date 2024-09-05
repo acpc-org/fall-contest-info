@@ -42,12 +42,16 @@ export default function SignUp() {
                 href="https://tx.ag/fall24signup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline decoration-dashed hover:decoration-solid "
+                className="underline decoration-dashed hover:decoration-solid text-orange-500"
+                style={rowdies.style}
               >
                 tx.ag/fall24register
               </a>
-              ). You must sign up by April 13th at 11:59 PM. Each
-              participantmate should fill out the form.
+              ). You must sign up by{" "}
+              <b className="text-orange-500" style={rowdies.style}>
+                September 21st at 11:59 PM
+              </b>
+              .
             </p>
             <div className="bg-neutral-800 py-4 rounded-lg mt-4">
               <iframe

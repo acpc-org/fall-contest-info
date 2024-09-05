@@ -120,75 +120,79 @@ const allowedLanguages = [
 
 const mainPrizes = [
   {
-    item: "???",
-    description: "?????",
-    pic: "/unknown.png",
+    item: "Airpods Max",
+    description:
+      "Apple's AirPods Max: wireless over-ear headphones with active noise cancelling, transparency mode, personalized spatial audio, dolby atmos, and bluetooth for iPhone",
+    pic: "/airpod_max.png",
   },
   {
-    item: "???",
-    description: "?????",
-    pic: "/unknown.png",
+    item: "Faker Mouse",
+    description:
+      "Razer DeathAdder V3 Pro Wireless Gaming Mouse: 63g, Focus Pro 30K Optical Sensor, Optical Switches Gen-3, HyperSpeed Wireless, 5 Programmable Buttons, 90 Hr Battery (Faker Edition)",
+    pic: "/gaming_mouse.png",
   },
   {
-    item: "???",
-    description: "?????",
-    pic: "/unknown.png",
+    item: "Airtags",
+    description:
+      "Airtags: Keep track of and find your items alongside friends and devices in the Find My app (4 pack)",
+    pic: "/airtags.png",
+  },
+  {
+    item: "Samsung Odyssey Monitor",
+    description:
+      "SAMSUNG 27-Inch Odyssey G55C Series QHD 1000R Curved Gaming Monitor, 1ms(MPRT), HDR10, 165Hz, AMD Radeon FreeSync, Eye Care",
+    pic: "/monitor.png",
+  },
+  {
+    item: "Lego Set",
+    description:
+      "LEGO Tranquil Garden Creative Building Set: Japanese Zen Gardens",
+    pic: "/lego.png",
   },
 ];
 
 const classificationPrizes = [
   {
-    item: "???",
-    description: "?????",
-    pic: "/unknown.png",
+    item: "Portable Speaker",
+    description:
+      "JBL Flip 6 - Portable Bluetooth Speaker: powerful sound and deep bass, IPX7 waterproof, 12 hours of playtime, JBL PartyBoost for multiple speaker pairing for home, outdoor and travel (Red)",
+    pic: "/portable_speaker.png",
+    timeFive: true,
   },
   {
-    item: "???",
-    description: "?????",
-    pic: "/unknown.png",
+    item: "Mechanical Keyboard",
+    description:
+      "EPOMAKER CIDOO V75 VIA Wireless Aluminum Mechanical Keyboard: 75% Gasket Gaming Keyboard, Bluetooth/2.4Ghz/USB-C Creamy Keyboard, with South-Facing LED, Rotary Knob, Poron Foam for Mac & Windows",
+    pic: "/mechanical_keyboard.png",
+    timeFive: true,
   },
   {
-    item: "???",
-    description: "?????",
-    pic: "/unknown.png",
-  },
-  {
-    item: "???",
-    description: "?????",
-    pic: "/unknown.png",
-  },
-  {
-    item: "???",
-    description: "?????",
-    pic: "/unknown.png",
+    item: "Goodr Sunglasses",
+    description:
+      "These red aviator sunglasses are named after Captain Blunt, a real pilot who happens to be Goodr's co-founder’s dad. That’s the only reference these no slip red frames and polarized red reflective lenses are making. Great for biking, running, golfing, and eating olympic quantities of taquitos.",
+    pic: "/goodr_sunglasses.png",
+    timeFive: true,
   },
 ];
 
 const mysteryPrizes = [
   {
-    item: "???",
+    item: "Mystery Prize",
     description: "?????",
     pic: "/unknown.png",
+    timeFive: true,
   },
   {
-    item: "???",
+    item: "Very Mysterious Prize",
     description: "?????",
     pic: "/unknown.png",
+    timeFive: true,
   },
   {
-    item: "???",
+    item: "Unknown Prize",
     description: "?????",
     pic: "/unknown.png",
-  },
-  {
-    item: "???",
-    description: "?????",
-    pic: "/unknown.png",
-  },
-  {
-    item: "???",
-    description: "?????",
-    pic: "/unknown.png",
+    timeFive: true,
   },
 ];
 
@@ -197,13 +201,19 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center gap-y-20 bg-[#132b2e]">
       <Header></Header>
       <div className="flex flex-col items-center justify-center text-center pt-28 bg-[#000]">
-        <div className="absolute w-[100vw] top-0 h-[50vh] z-[5] translate-y-[100px] bg-gradient-to-b from-[#000000cb] from-50% via-[#020d0d89] via-80% to-[#020d0d00] to-100%"></div>
+        <div className="absolute w-[100vw] top-0 h-[60vh] z-[5] translate-y-[100px] bg-gradient-to-b from-[#000000cb] from-50% via-[#020d0d89] via-80% to-[#020d0d00] to-100%"></div>
         <div className="flex flex-col gap-4 items-center justify-center pb-8 px-4 sm:px-12 ">
+          <h1
+            className="text-3xl sm:text-4xl font-bold text-white uppercase z-[6]"
+            style={rowdies.style}
+          >
+            ACPC × ROBLOX
+          </h1>
           <h1
             className="text-5xl sm:text-6xl font-bold text-white uppercase z-[6]"
             style={rowdies.style}
           >
-            ACPC × ROBLOX Fall Contest
+            Fall Contest
           </h1>
           <div className="flex items-center gap-4 text-black">
             <div
@@ -252,7 +262,8 @@ export default function Home() {
               href="https://tx.ag/acpcwebsite"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline decoration-dashed hover:decoration-solid "
+              className="underline decoration-dashed hover:decoration-solid bold text-orange-500 hover:text-orange-700 duration-200"
+              style={rowdies.style}
             >
               Aggie Competitive Programming Club
             </a>
@@ -285,9 +296,11 @@ export default function Home() {
           <p className="mb-8">
             So come, and compete for the chance to win prizes, qualify for{" "}
             <a
-              className="bold text-orange-500 hover:text-orange-700 duration-200"
+              className="underline decoration-dashed hover:decoration-solid bold text-orange-500 hover:text-orange-700 duration-200"
               style={rowdies.style}
               href="https://icpc.global/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               the International Collegiate Programming Contest (ICPC)
             </a>
@@ -542,19 +555,28 @@ export default function Home() {
           Schedule
         </h2>
         <div className="mt-4">
-          {schedule.map((event, index) => (
-            <div
-              key={"event" + index}
-              className="flex items-center justify-between border-gray-700 border-b-[1px] p-4 bg-[#173234] hover:bg-[#254b4e] rounded-lg duration-500"
-            >
-              <p className="text-xl font-bold">{event.time}</p>
-              <p className="text-lg">{event.event}</p>
-            </div>
-          ))}
+          {schedule.map((event, index) =>
+            event.event ? (
+              <div
+                key={"event" + index}
+                className="flex items-center justify-between border-gray-700 border-b-[1px] p-4 bg-[#173234] hover:bg-[#254b4e] rounded-lg duration-500"
+              >
+                <p className="text-xl font-bold">{event.time}</p>
+                <p className="text-lg">{event.event}</p>
+              </div>
+            ) : (
+              <h3
+                className="text-2xl font-bold text-orange-500 mt-4 mb-2"
+                style={rowdies.style}
+              >
+                {event.time}
+              </h3>
+            )
+          )}
         </div>
         <p className="mt-4 italic">
-          Please arrive on-time Sunday between 12:00 pm and 12:30 pm so you have time
-          to properly get setup and hear important contest announcements!
+          Please arrive on-time Sunday between 12:00 pm and 12:30 pm so you have
+          time to properly get setup and hear important contest announcements!
         </p>
       </div>
       <div id="prizes" className="w-full px-12 sm:px-20">
@@ -563,8 +585,13 @@ export default function Home() {
         </h2>
         <p className="my-4">
           Enough prizes for every member of the participant, totalling over
-          $2000 in value! However, due to legal / organizational requirements,
-          only Texas A&M participants can receive prizes.
+          {"  "}
+          <b className="bold text-orange-500" style={rowdies.style}>
+            $2000
+          </b>
+          {"  "}
+          in value! However, due to legal / organizational requirements, only
+          Texas A&M participants can receive prizes.
         </p>
         <div className="mb-8">
           <h3 className="text-2xl font-bold uppercase" style={rowdies.style}>
@@ -572,7 +599,7 @@ export default function Home() {
           </h3>
           <div className="flex flex-col lg:flex-row gap-4 mt-2">
             <div className="bg-orange-200 border-[10px] border-[#7e523a] shadow-lg rounded-lg px-4 pb-4 pt-2 flex-grow">
-              <h4 className="mb-2">Prize Pool</h4>
+              <h4 className="mb-2 text-black">Prize Pool</h4>
               <div className="flex gap-4 flex-wrap justify-between">
                 {mainPrizes.map((prize, index) => (
                   <PrizeItem
@@ -612,13 +639,14 @@ export default function Home() {
           </h3>
           <div className="flex flex-col lg:flex-row gap-4 mt-2">
             <div className="bg-orange-200 border-[10px] border-[#7e523a] shadow-lg rounded-lg px-4 pb-4 pt-2 flex-grow">
-              <h4 className="mb-2">Prize Pool</h4>
+              <h4 className="mb-2 text-black">Prize Pool</h4>
               <div className="flex gap-4 flex-wrap justify-between">
                 {classificationPrizes.map((prize, index) => (
                   <PrizeItem
                     key={"prize" + index}
                     item={prize.item}
                     description={prize.description}
+                    timeFive={prize.timeFive}
                     pic={"/prizes" + prize.pic}
                   ></PrizeItem>
                 ))}
@@ -664,13 +692,14 @@ export default function Home() {
           </h3>
           <div className="flex flex-col lg:flex-row gap-4 mt-2 ">
             <div className="bg-orange-200 border-[10px] border-[#7e523a] shadow-lg rounded-lg px-4 pb-4 pt-2 flex-grow0">
-              <h4 className="mb-2">Prize Pool</h4>
+              <h4 className="mb-2 text-black">Prize Pool</h4>
               <div className="flex gap-4 flex-wrap justify-between">
                 {mysteryPrizes.map((prize, index) => (
                   <PrizeItem
                     key={"prize" + index}
                     item={prize.item}
                     description={prize.description}
+                    timeFive={prize.timeFive}
                     pic={"/prizes" + prize.pic}
                   ></PrizeItem>
                 ))}
@@ -724,8 +753,8 @@ export default function Home() {
                       <Image
                         src={"/sponsors" + sponsor.logo}
                         alt={sponsor.name}
-                        width={200}
-                        height={200}
+                        width={300}
+                        height={300}
                       ></Image>
                     </a>
                   </TooltipTrigger>

@@ -5,12 +5,9 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 // icons
-import {
-  RxGlobe,
-  RxInstagramLogo,
-  RxDiscordLogo,
-  RxHeart,
-} from "react-icons/rx";
+import { RxGlobe, RxInstagramLogo, RxDiscordLogo } from "react-icons/rx";
+
+import { FaHeart } from "react-icons/fa";
 
 // socials
 const socials = [
@@ -42,7 +39,7 @@ export default function Footer() {
         <div className="flex flex-col gap-8">
           <div className="flex items-center gap-2">
             <p className="text-white">Made with</p>
-            <RxHeart className="text-blue-600"></RxHeart>
+            <FaHeart className="text-orange-600"></FaHeart>
             <p className="text-white">by the 2024 ACPC Officers</p>
           </div>
           <Image src="/acpc-logo.svg" alt="" width={100} height={100}></Image>

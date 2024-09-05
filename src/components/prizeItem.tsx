@@ -9,9 +9,18 @@ interface PrizeItemProps {
   item: string;
   description: string;
   pic: string;
+  timeFive?: boolean;
 }
 
 export default function PrizeItem(params: PrizeItemProps) {
+  const timeFiveDiv = params.timeFive ? (
+    <span className="text-4xl bold" style={rowdies.style}>
+      5×
+    </span>
+  ) : (
+    undefined
+  );
+
   return (
     <div className="bg-white text-black shadow-lg hover:shadow-xl hover:rotate-1 border-[1px] rounded-lg w-[200px] max-w-[30vw] flex-grow flex flex-col hover:scale-105 duration-300">
       <div className="p-4">
@@ -31,11 +40,12 @@ export default function PrizeItem(params: PrizeItemProps) {
         ></Image>
       </div>
       <div className="flex items-center justify-between gap-4 p-4 pt-0 flex-grow">
-        <div className="">
+        <div className="w-full">
           <h5 className="text-md font-bold" style={rowdies.style}>
             {params.item}
           </h5>
-          <div className="overflow-x-scroll">
+          <div className="overflow-x-scroll flex gap-4">
+            {timeFiveDiv}
             <p className="text-xs ">{params.description}</p>
           </div>
         </div>
