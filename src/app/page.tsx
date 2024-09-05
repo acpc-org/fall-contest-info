@@ -249,7 +249,7 @@ export default function Home() {
           <p className="mb-4">
             Welcome to{" "}
             <a
-              href="https://tamuacpc.com/about"
+              href="https://tx.ag/acpcwebsite"
               target="_blank"
               rel="noopener noreferrer"
               className="underline decoration-dashed hover:decoration-solid "

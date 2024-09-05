@@ -39,7 +39,7 @@ export default function SignUp() {
             <p>
               Sign up using the Google Form below (also available at{" "}
               <a
-                href="https://tamuacpc.com/about"
+                href="https://tx.ag/fall24signup"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline decoration-dashed hover:decoration-solid "

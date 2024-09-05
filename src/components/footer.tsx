@@ -17,7 +17,7 @@ const socials = [
   {
     name: "Website",
     icon: <RxGlobe></RxGlobe>,
-    link: "https://tamuacpc.com/",
+    link: "https://tx.ag/acpcwebsite",
   },
   {
     name: "Instagram",
