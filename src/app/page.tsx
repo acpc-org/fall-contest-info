@@ -214,7 +214,7 @@ export default function Home() {
           >
             Fall Contest
           </h1>
-          <div className="flex items-center gap-4 text-black">
+          <div className="flex flex-col sm:flex-row items-center gap-4 text-black">
             <div
               className="bg-image text-sm sm:text-md py-1 px-4 z-[6] flex-grow flex items-center gap-0 sm:gap-2 shadow-md hover:scale-[1.05] hover:rotate-1 hover:shadow-lg duration-200"
               style={{ backgroundImage: "url('/wood/wood1.png')" }}
@@ -222,19 +222,21 @@ export default function Home() {
               <RxClock></RxClock>
               <p>Sep 19th - 7:00 PM and Sep 22nd - 12:00 PM</p>
             </div>
-            <div
-              className="bg-image text-sm sm:text-md py-1 px-4 z-[6] flex-grow flex items-center gap-0 sm:gap-2 shadow-md hover:scale-[1.05] hover:rotate-1 hover:shadow-lg duration-200"
-              style={{ backgroundImage: "url('/wood/wood2.png')" }}
-            >
-              <RxSewingPinFilled></RxSewingPinFilled>
-              <p>PETR 118</p>
-            </div>
-            <div
-              className="bg-image text-sm sm:text-md py-1 px-4 z-[6] flex-grow flex items-center gap-0 sm:gap-2 shadow-md hover:scale-[1.05] hover:rotate-1 hover:shadow-lg duration-200"
-              style={{ backgroundImage: "url('/wood/wood1.png')" }}
-            >
-              <RxFace></RxFace>
-              <p>Food + Prizes</p>
+            <div className="flex items-center gap-4">
+              <div
+                className="bg-image text-sm sm:text-md py-1 px-4 z-[6] flex-grow flex items-center gap-0 sm:gap-2 shadow-md hover:scale-[1.05] hover:rotate-1 hover:shadow-lg duration-200"
+                style={{ backgroundImage: "url('/wood/wood2.png')" }}
+              >
+                <RxSewingPinFilled></RxSewingPinFilled>
+                <p>PETR 118</p>
+              </div>
+              <div
+                className="bg-image text-sm sm:text-md py-1 px-4 z-[6] flex-grow flex items-center gap-0 sm:gap-2 shadow-md hover:scale-[1.05] hover:rotate-1 hover:shadow-lg duration-200"
+                style={{ backgroundImage: "url('/wood/wood1.png')" }}
+              >
+                <RxFace></RxFace>
+                <p>Food + Prizes</p>
+              </div>
             </div>
           </div>
         </div>
@@ -468,7 +470,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <div
                 className="flex items-center justify-center bg-image p-4 shadow-sm hover:shadow-md hover:scale-105 hover:rotate-1 duration-200"
                 style={{ backgroundImage: "url('/wood/wood1.png')" }}

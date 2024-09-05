@@ -134,14 +134,14 @@ export default function Header() {
       <div className="flex items-center gap-4">
         <Countdown></Countdown>
         <a
-          className="text-xs md:text-sm lg:text-md pulse-animation bold py-1 px-2 rounded-lg text-yellow-50 bg-orange-600 hover:text-white hover:bg-orange-500 hover:rotate-1 hover:scale-105 duration-200"
+          className="text-center text-xs md:text-sm lg:text-md pulse-animation bold py-1 px-2 rounded-lg text-yellow-50 bg-orange-600 hover:text-white hover:bg-orange-500 hover:rotate-1 hover:scale-105 duration-200"
           href="/signup"
           style={rowdies.style}
         >
           Sign Up
         </a>
         <a
-          className="text-xs md:text-sm pulse-animation bold py-1 px-2 rounded-lg text-yellow-50 bg-orange-600 hover:text-white hover:bg-orange-500 hover:rotate-1 hover:scale-105 duration-200"
+          className="text-center text-xs md:text-sm pulse-animation bold py-1 px-2 rounded-lg text-yellow-50 bg-orange-600 hover:text-white hover:bg-orange-500 hover:rotate-1 hover:scale-105 duration-200"
           href="https://www.gem.com/lp/roblox/fa24tamu-innovationsatroblox"
           style={rowdies.style}
         >
