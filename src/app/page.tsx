@@ -568,6 +568,7 @@ export default function Home() {
               <h3
                 className="text-2xl font-bold text-orange-500 mt-4 mb-2"
                 style={rowdies.style}
+                key={"event" + index}
               >
                 {event.time}
               </h3>

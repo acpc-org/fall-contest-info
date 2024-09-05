@@ -23,7 +23,10 @@ import { RxLapTimer } from "react-icons/rx";
 
 export default function Countdown() {
   const now = new Date();
-  const endDate = new Date("September 22, 2024 17:00:00"); // 17 = 5pm GMT = 12pm CDT
+  const endDate = React.useMemo(
+    () => new Date("September 22, 2024 17:00:00"),
+    []
+  ); // 17 = 5pm GMT = 12pm CDT
 
   const [countdown, setCountdown] = useState("");
   const [formattedCountDown, setFormattedCountDown] = useState("");
