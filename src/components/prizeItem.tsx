@@ -31,7 +31,6 @@ export default function PrizeItem(params: PrizeItemProps) {
         ></Image>
       </div>
       <div className="flex items-center justify-between gap-4 p-4 pt-0 flex-grow">
-        <div className="text-lg font-bold">3x</div>
         <div className="">
           <h5 className="text-md font-bold" style={rowdies.style}>
             {params.item}

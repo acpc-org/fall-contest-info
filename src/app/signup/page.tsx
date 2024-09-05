@@ -12,7 +12,7 @@ export default function SignUp() {
       <Header></Header>
       <div className="flex flex-col gap-8 my-28">
         <h1 className="text-6xl font-bold uppercase " style={rowdies.style}>
-          Sign Up
+          Contest Sign Up
         </h1>
         <ol className="list-decimal">
           <li className="mb-8">
@@ -51,7 +51,7 @@ export default function SignUp() {
             </p>
             <div className="bg-neutral-800 py-4 rounded-lg mt-4">
               <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfiz-PEIkiBFqfuDF-nIJPLsbDpq-2UMnAQuGi1EJyHkah47w/viewform?embedded=true"
+                src="https://docs.google.com/forms/d/1CK4UYYv6J5Z5OB9lP-nNI92bWRlDfz5vSPUGbzL4mzU/viewform?embedded=true"
                 width="640"
                 height="4122"
                 className="w-full"

@@ -69,10 +69,10 @@ function DropDownMenu() {
                     style={{ backgroundImage: "url('/layers/complete.png')" }}
                   >
                     <div className="mb-2 mt-4 text-lg font-medium text-white">
-                      Sign Up Now
+                      Contest Sign Up
                     </div>
                     <p className="text-sm leading-tight text-slate-300">
-                      Deadline is April 13th at 11:59 PM
+                      Deadline is September 21st at 11:59 PM
                     </p>
                   </a>
                 </NavigationMenuLink>
@@ -138,7 +138,14 @@ export default function Header() {
           href="/signup"
           style={rowdies.style}
         >
-          Sign Up
+          Contest Sign Up
+        </a>
+        <a
+          className="pulse-animation bold py-2 px-4 rounded-lg text-yellow-50 bg-orange-600 hover:text-white hover:bg-orange-500 hover:rotate-1 hover:scale-105 duration-200"
+          href="https://www.gem.com/lp/roblox/fa24tamu-innovationsatroblox"
+          style={rowdies.style}
+        >
+          ROBLOX Kickoff
         </a>
       </div>
     </header>

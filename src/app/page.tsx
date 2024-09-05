@@ -22,6 +22,16 @@ import Forest from "@/components/forest";
 // lists
 const schedule = [
   {
+    time: "Thursday, September 19th",
+  },
+  {
+    time: "7:00 PM - 8:00 PM",
+    event: "Sponsored Kickoff by ROBLOX",
+  },
+  {
+    time: "Sunday, September 22nd",
+  },
+  {
     time: "12:00 PM - 1:00 PM",
     event: "Check-In / Pre Contest",
   },
@@ -193,7 +203,7 @@ export default function Home() {
             className="text-5xl sm:text-6xl font-bold text-white uppercase z-[6]"
             style={rowdies.style}
           >
-            ACPC Fall Contest
+            ACPC × ROBLOX Fall Contest
           </h1>
           <div className="flex items-center gap-4 text-black">
             <div
@@ -201,7 +211,7 @@ export default function Home() {
               style={{ backgroundImage: "url('/wood/wood1.png')" }}
             >
               <RxClock></RxClock>
-              <p>September 22nd - 12:00 PM</p>
+              <p>Sep 19th - 7:00 PM and Sep 22nd - 12:00 PM</p>
             </div>
             <div
               className="bg-image text-sm sm:text-md py-1 px-4 z-[6] flex-grow flex items-center gap-0 sm:gap-2 shadow-md hover:scale-[1.05] hover:rotate-1 hover:shadow-lg duration-200"
@@ -295,7 +305,7 @@ export default function Home() {
             style={rowdies.style}
             href="/signup"
           >
-            Sign Up Now
+            Contest Sign Up
           </a>
         </div>
       </div>
@@ -333,6 +343,13 @@ export default function Home() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
+                    <div>
+                      <div className="text-2xl font-bold flex items-center gap-2">
+                        <RxClock></RxClock>
+                        <p>September 19th</p>
+                      </div>
+                      <p className="text-lg">7:00 PM - 8:00 PM</p>
+                    </div>
                     <div>
                       <div className="text-2xl font-bold flex items-center gap-2">
                         <RxClock></RxClock>
@@ -492,6 +509,13 @@ export default function Home() {
           <p>See more details:</p>
           <div className="flex gap-4 align-center">
             <a
+              href="https://www.gem.com/lp/roblox/fa24tamu-innovationsatroblox"
+              className="p-2 px-4 shadow-md hover:shadow-lg hover:rotate-1 hover:scale-105 hover:duration-200 bg-image"
+              style={{ backgroundImage: "url('/wood/wood4.png')" }}
+            >
+              ROBLOX Kickoff
+            </a>
+            <a
               href="/specifics"
               className="p-2 px-4 shadow-md hover:shadow-lg hover:rotate-1 hover:scale-105 hover:duration-200 bg-image"
               style={{ backgroundImage: "url('/wood/wood4.png')" }}
@@ -529,7 +553,7 @@ export default function Home() {
           ))}
         </div>
         <p className="mt-4 italic">
-          Please arrive on-time between 12:00 pm and 12:30 pm so you have time
+          Please arrive on-time Sunday between 12:00 pm and 12:30 pm so you have time
           to properly get setup and hear important contest announcements!
         </p>
       </div>
@@ -544,7 +568,7 @@ export default function Home() {
         </p>
         <div className="mb-8">
           <h3 className="text-2xl font-bold uppercase" style={rowdies.style}>
-            Main Prizes (Top 3)
+            Main Prizes (Top 5)
           </h3>
           <div className="flex flex-col lg:flex-row gap-4 mt-2">
             <div className="bg-orange-200 border-[10px] border-[#7e523a] shadow-lg rounded-lg px-4 pb-4 pt-2 flex-grow">
@@ -584,7 +608,7 @@ export default function Home() {
 
         <div className="mb-8">
           <h3 className="text-2xl font-bold uppercase" style={rowdies.style}>
-            Classification Prizes
+            Classification Prizes (Top 3)
           </h3>
           <div className="flex flex-col lg:flex-row gap-4 mt-2">
             <div className="bg-orange-200 border-[10px] border-[#7e523a] shadow-lg rounded-lg px-4 pb-4 pt-2 flex-grow">
@@ -627,10 +651,6 @@ export default function Home() {
                       Participants that win a main prize cannot also win a class
                       year prize.
                     </li>
-                    <li>
-                      Class year is determined by the member of your participant
-                      with the highest class year.
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -640,7 +660,7 @@ export default function Home() {
 
         <div className="mb-8">
           <h3 className="text-2xl font-bold uppercase" style={rowdies.style}>
-            Special / &quot;Creative&quot; Prizes (Top 3)
+            Special / &quot;Creative&quot; Prizes (???)
           </h3>
           <div className="flex flex-col lg:flex-row gap-4 mt-2 ">
             <div className="bg-orange-200 border-[10px] border-[#7e523a] shadow-lg rounded-lg px-4 pb-4 pt-2 flex-grow0">
